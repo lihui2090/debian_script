@@ -36,21 +36,21 @@ wget http://ftp.debian.org/debian/pool/non-free/f/firmware-nonfree/firmware-bnx2
 fi
 cd ..
 step_by_step "install firmware"
-sudo dpkg-deb -x  netinstaller/firmware-bnx2x_0.26_all.deb  netinstaller/bnx2x/
+ dpkg-deb -x  netinstaller/firmware-bnx2x_0.26_all.deb  netinstaller/bnx2x/
 
 step_by_step "cp   firmware to initrd"
 
 mkdir -p  netinstaller/initrd
 cd  netinstaller/initrd && zcat  ../../netinstaller/cd/install.amd/initrd.gz | cpio -iv
-cd .. 
+cd ../../ 
 cp -Rpv  netinstaller/bnx2x/lib/firmware  netinstaller/initrd/lib
 step_by_step "install preseed"
 cp -v <yourpreseedfile>  netinstaller/initrd/preseed.cfg
 step_by_step "pack new initrd"
 cd  netinstaller/initrd && find . -print0 | cpio -0 -H newc -ov | gzip -c >  ../../netinstaller/cd/install.amd/initrd.gz
-cd ..
+cd ../../
 cd  netinstaller/cd; md5sum `find ! -name "md5sum.txt" ! -path "./isolinux/*" -follow -type f` > md5sum.txt;cd -
-cd ..
+cd ../../
 step_by_step "create iso"
 mkisofs -o  netinstaller/debian-8.3.0-amd64-netinst.iso -r -J -no-emul-boot -boot-load-size 4 -boot-info-table -b isolinux/isolinux.bin -c isolinux/boot.cat  netinstaller/cd
 
