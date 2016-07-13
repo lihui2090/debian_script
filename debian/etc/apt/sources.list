@@ -1,0 +1,30 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 8.5.0 _Jessie_ - Official amd64 DVD Binary-1 20160604-15:35]/ jessie contrib main
+
+#deb cdrom:[Debian GNU/Linux 8.5.0 _Jessie_ - Official amd64 DVD Binary-1 20160604-15:35]/ jessie contrib main
+
+
+deb http://security.debian.org/ jessie/updates main contrib
+deb-src http://security.debian.org/ jessie/updates main contrib
+
+# jessie-updates, previously known as 'volatile'
+# A network mirror was not selected during install.  The following entries
+# are provided as examples, but you should amend them as appropriate
+# for your mirror of choice.
+#
+# deb http://ftp.debian.org/debian/ jessie-updates main contrib
+# deb-src http://ftp.debian.org/debian/ jessie-updates main contrib
+
+
+deb http://mirrors.ustc.edu.cn/debian jessie main contrib non-free
+
+deb-src http://mirrors.ustc.edu.cn/debian jessie main contrib non-free
+
+deb http://mirrors.ustc.edu.cn/debian jessie-proposed-updates main contrib non-free
+
+deb-src http://mirrors.ustc.edu.cn/debian jessie-proposed-updates main contrib non-free
+
+deb http://mirrors.ustc.edu.cn/debian jessie-updates main contrib non-free
+
+deb-src http://mirrors.ustc.edu.cn/debian jessie-updates main contrib non-free
