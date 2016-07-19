@@ -75,7 +75,15 @@ apt-get install autoconf automake autotools-dev  build-essential -y
 }
 
 
+install_freecad(){
 
+apt-get install freecad -y
+}
+
+install_gead(){
+
+apt-get install geda -y
+}
 
 
 modify_sourceslist
@@ -83,4 +91,8 @@ install_git
 config_git
 install_auto_tools
 install_debain_maintainer_tools
+
+install_freecad
+
+install_gead
 
