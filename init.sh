@@ -69,6 +69,11 @@ apt-get install   dpkg-dev \
 
 }
 
+install_linux_header(){
+
+apt-get install linux-headers-$(uname -r) -y 
+}
+
 install_auto_tools(){
 
 apt-get install autoconf automake autotools-dev  build-essential -y 
