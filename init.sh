@@ -90,14 +90,15 @@ install_gead(){
 apt-get install geda -y
 }
 
+install_meld(){
+apt-get install meld -y
+}
 
 modify_sourceslist
 install_git
 config_git
 install_auto_tools
 install_debain_maintainer_tools
-
 install_freecad
-
 install_gead
-
+install_meld
