@@ -87,7 +87,7 @@ apt-get install freecad -y
 
 install_gead(){
 
-apt-get install geda -y
+apt-get install geda tclspice -y
 }
 
 install_meld(){
