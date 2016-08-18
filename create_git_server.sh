@@ -21,6 +21,7 @@ ssh-keygen -t rsa -b 4096 -C "xx@xx.com"
 modify the key name 
 input the passwd for use the key
 cat the pubkey
+git clone git@ip:/dir/gitname.git
 
 
 
