@@ -1,0 +1,47 @@
+########################################################################
+method one
+apt-get install python-pip python-dev build-essential
+sudo apt-get install libboost-all-dev
+sudo apt-get install libblitz0-dev
+sudo apt-get install cmake
+sudo apt-get install libhdf5-serial-dev
+sudo apt-get install libtiff5
+sudo apt-get install libtiff5-dev
+sudo apt-get install libtiff-tools
+sudo apt-get install giflib-dbg
+
+apt-get install wget git-core pkg-config cmake python-dev python-support liblapack-dev libatlas-base-dev libblitz0-dev libavformat-dev libavcodec-dev libswscale-dev libboost-all-dev libmatio-dev libjpeg-dev libnetpbm10-dev libpng12-dev libtiff5-dev libgif-dev libhdf5-serial-dev libfftw3-dev texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended libsvm-dev libvl-dev dvipng python-numpy python-scipy dvipng libopencv-dev gcc g++ make -y
+apt-get install python-argparse python-matplotlib python-tornado python-sqlalchemy python-sphinx python-nose python-setuptools python-pil ipython python-ipdb
+
+#install depdence by hand 
+# install  liblapack-dev
+aptitude
+pip install --upgrade pip
+pip install  --upgrade virtualenv
+
+oot@biubiu:/backup/backup/mathmatic/facerec/facereclib-2.1.2# cat requirements.txt 
+setuptools      # for whatever
+six
+bob.core
+bob.io.base
+bob.io.image
+bob.ip.base
+bob.ip.gabor
+bob.ip.color
+bob.ip.facedetect==2.0.2
+bob.ip.flandmark
+bob.math
+bob.measure
+bob.learn.linear
+bob.learn.em
+bob.db.verification.utils
+bob.db.verification.filelist
+bob.db.atnt
+
+pip install xxx
+
+
+
+###########################################################
+method two
+https://github.com/idiap/bob/wiki/Binary-Installation
