@@ -25,7 +25,7 @@ read var1
 
 
 modify_sourceslist(){
-install -p  debian/etc/apt/sources.list /etc/apt/sources.list
+install -p  ../debian/etc/apt/sources.list /etc/apt/sources.list
 apt-get update
 }
 
