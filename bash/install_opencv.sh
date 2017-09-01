@@ -31,6 +31,10 @@ sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavform
 sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 
 }
+prepare_enviroment(){
+mkdir  -p  $OPENCV_SRC_DIR
+}
+
 
 get_opencv_src(){
 cd  $OPENCV_SRC_DIR
@@ -44,7 +48,7 @@ build_opencv(){
 cd $OPENCV_SRC_DIR/opencv
 mkdir build
 cd build
-cmake -D CMAKE_BUILD_TYPE=Release\Debug -D OPENCV_EXTRA_MODULES_PATH=$OPENCV_SRC_DIR/opencv_cotrib/modules -D CMAKE_INSTALL_PREFIX=/usr/local ..
+cmake -D CMAKE_BUILD_TYPE=Release\Debug\BUILD_EXAMPLES  -D OPENCV_EXTRA_MODULES_PATH=$OPENCV_SRC_DIR/opencv_cotrib/modules -D CMAKE_INSTALL_PREFIX=/usr/local ..
 sudo make install
 
 }
@@ -63,6 +67,7 @@ $OPENCV_BUILD_DIR/bin/opencv_test_core
 
 
 install_base_packages
+prepare_enviroment
 get_opencv_src
 build_opencv
 get_test
